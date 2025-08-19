@@ -1,0 +1,115 @@
+.btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  font-weight: 500;
+  border-radius: 0.5rem;
+  border: none;
+  cursor: pointer;
+  transition: var(--transition-smooth);
+  font-family: var(--font-primary);
+  text-decoration: none;
+  position: relative;
+  overflow: hidden;
+}
+
+.btn:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+  transform: none !important;
+}
+
+.btn:focus {
+  outline: 2px solid var(--color-accent-cyan);
+  outline-offset: 2px;
+}
+
+/* Sizes */
+.btn-sm {
+  padding: 0.5rem 1rem;
+  font-size: 0.875rem;
+}
+
+.btn-md {
+  padding: 0.75rem 1.5rem;
+  font-size: 1rem;
+}
+
+.btn-lg {
+  padding: 1rem 2rem;
+  font-size: 1.125rem;
+}
+
+/* Variants */
+.btn-primary {
+  background: linear-gradient(135deg, var(--color-accent-cyan), var(--color-accent-magenta));
+  color: var(--color-bg-primary);
+  box-shadow: 0 4px 15px hsla(189, 100%, 50%, 0.3);
+}
+
+.btn-primary:hover:not(:disabled) {
+  box-shadow: 0 6px 20px hsla(300, 100%, 65%, 0.4);
+  transform: translateY(-2px);
+}
+
+.btn-secondary {
+  background: var(--color-bg-panel);
+  color: var(--color-text-primary);
+  border: 1px solid var(--color-accent-cyan);
+}
+
+.btn-secondary:hover:not(:disabled) {
+  background: var(--color-accent-cyan);
+  color: var(--color-bg-primary);
+  box-shadow: 0 4px 15px hsla(189, 100%, 50%, 0.3);
+}
+
+.btn-danger {
+  background: var(--color-danger);
+  color: white;
+  box-shadow: 0 4px 15px hsla(4, 90%, 65%, 0.3);
+}
+
+.btn-danger:hover:not(:disabled) {
+  background: hsl(4, 90%, 55%);
+  transform: translateY(-2px);
+}
+
+.btn-ghost {
+  background: transparent;
+  color: var(--color-text-primary);
+}
+
+.btn-ghost:hover:not(:disabled) {
+  background: var(--color-bg-panel);
+}
+
+/* Loading State */
+.btn-loading {
+  pointer-events: none;
+}
+
+.btn-spinner {
+  width: 1em;
+  height: 1em;
+  border: 2px solid transparent;
+  border-top: 2px solid currentColor;
+  border-radius: 50%;
+  animation: spin 1s linear infinite;
+}
+
+@keyframes spin {
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+/* Glow Effect on Active */
+.btn-primary:active:not(:disabled) {
+  box-shadow: 0 0 25px var(--color-accent-cyan);
+}
+
+.btn-secondary:active:not(:disabled) {
+  box-shadow: 0 0 25px var(--color-accent-cyan);
+}

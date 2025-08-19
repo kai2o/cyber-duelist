@@ -1,0 +1,111 @@
+.terminal-container {
+  display: flex;
+  flex-direction: column;
+  height: 400px;
+  background: var(--color-bg-primary);
+  border: 1px solid var(--color-accent-lime);
+  border-radius: 0.75rem;
+  box-shadow: 0 0 20px hsla(75, 100%, 63%, 0.2);
+  font-family: var(--font-mono);
+  overflow: hidden;
+  transition: var(--transition-smooth);
+}
+
+.terminal-container:hover {
+  box-shadow: 0 0 30px hsla(75, 100%, 63%, 0.3);
+}
+
+.terminal-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0.75rem 1rem;
+  background: var(--color-bg-panel);
+  border-bottom: 1px solid var(--color-accent-lime);
+}
+
+.terminal-title {
+  font-size: 0.875rem;
+  font-weight: 600;
+  color: var(--color-accent-lime);
+}
+
+.terminal-controls {
+  display: flex;
+  gap: 0.5rem;
+}
+
+.terminal-dot {
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+}
+
+.terminal-dot-red {
+  background: var(--color-danger);
+}
+
+.terminal-dot-yellow {
+  background: var(--color-warning);
+}
+
+.terminal-dot-green {
+  background: var(--color-success);
+}
+
+.terminal-body {
+  flex: 1;
+  padding: 1rem;
+  overflow-y: auto;
+  background: var(--color-bg-primary);
+  font-size: 0.875rem;
+  line-height: 1.5;
+}
+
+.terminal-line {
+  margin-bottom: 0.25rem;
+  word-wrap: break-word;
+}
+
+.terminal-line-input {
+  color: var(--color-accent-lime);
+}
+
+.terminal-line-output {
+  color: var(--color-text-primary);
+}
+
+.terminal-line-error {
+  color: var(--color-danger);
+}
+
+.terminal-input-line {
+  display: flex;
+  align-items: center;
+  margin-top: 0.5rem;
+}
+
+.terminal-prompt {
+  color: var(--color-accent-lime);
+  margin-right: 0.5rem;
+  flex-shrink: 0;
+}
+
+.terminal-input {
+  flex: 1;
+  background: transparent;
+  border: none;
+  color: var(--color-accent-lime);
+  font-family: var(--font-mono);
+  font-size: 0.875rem;
+  outline: none;
+}
+
+.terminal-input::placeholder {
+  color: hsla(75, 100%, 63%, 0.5);
+}
+
+.terminal-input:disabled {
+  color: var(--color-text-muted);
+  cursor: not-allowed;
+}
